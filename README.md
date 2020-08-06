@@ -34,6 +34,8 @@ Hosting many static landing pages/websites? Tired of doing the same rigmarole on
   - Stack must be launched on `us-east-1` region. Lambda@Edge requirements.
   - No server-side content, since the files are hosted in S3.
     - Client-side JS and an API can provide server-side content.
+  - The index page of a folder is `index.htm` ***only***.
+    - Documents w/o an extension (e.g. `folder/doc`) won't redirect to the index page (e.g. `folder/doc/index.htm`).
   - The same error page design applies to all websites.
     - CloudFront wipes request headers when returning a request to origin for the error document.
     - If you know how to bypass this wipe, [tweet me](https://twitter.com/Peso255) or open a pull request!
