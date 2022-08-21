@@ -39,7 +39,6 @@
                                 "  request.headers['x-forwarded-host'] = [",
                                 "    { key: 'X-Forwarded-Host', value: request.headers.host[0].value }",
                                 "  ];",
-                                "  console.log(request.headers.host[0].value + request.uri);",
                                 "  return callback(null, request);",
                                 "};"
                             ]
